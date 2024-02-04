@@ -8,9 +8,9 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Configuration {
+public class ModeDePaiement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idConfiguration;
-    double tva;
+    int idModeDePaiement;
+    String designation;
 }

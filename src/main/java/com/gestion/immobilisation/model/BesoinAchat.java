@@ -1,11 +1,12 @@
 package com.gestion.immobilisation.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Date;
+import java.util.List;
+
 @Data
 public class BesoinAchat {
     public enum EtatBesoin {
@@ -21,10 +22,9 @@ public class BesoinAchat {
     @ManyToOne
     @JoinColumn(name = "id_departement")
     Departement departement;
+
     @JsonManagedReference
-    @OneToMany(mappedBy = "besoinAchat", fetch = FetchType.LAZY
-            List<DemandeProduit> demandeProduit;
-            EtatBesoin etatBesoin;
+    @OneToMany(mappedBy = "besoinAchat", fetch = FetchType.LAZY)
+    List<DemandeProduit> demandeProduit;
+    EtatBesoin etatBesoin;
 }
-@JsonBackReference
-@ManyToOne(fetch = FetchType.LAZY

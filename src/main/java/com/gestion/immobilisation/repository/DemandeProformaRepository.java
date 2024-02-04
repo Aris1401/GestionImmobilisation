@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import javax.swing.*;
 
-public interface DemandeProformaRepository  extends CrudRepository<DemandeProforma,Long>
+public interface DemandeProformaRepository  extends CrudRepository<DemandeProforma,Integer>
 {
 }
 

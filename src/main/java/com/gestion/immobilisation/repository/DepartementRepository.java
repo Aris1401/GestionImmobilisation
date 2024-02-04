@@ -7,13 +7,8 @@ import org.springframework.data.repository.CrudRepository;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public interface DepartementRepository  extends CrudRepository<Departement,Long>
-{
-    @Query("select * from Departement")
-    public ArrayList<Departement> getAllDepartement();
+public interface DepartementRepository  extends CrudRepository<Departement,Integer> {
 
-    @Query("Insert into Depatement(nom) VALUES (?)")
-    public void saveDepartement();
 }
 
 
