@@ -1,5 +1,7 @@
 package com.gestion.immobilisation.dto;
 
+import lombok.Data;
+
 @Data
 public class TotalBonDeCommande {
     double totalHT;
