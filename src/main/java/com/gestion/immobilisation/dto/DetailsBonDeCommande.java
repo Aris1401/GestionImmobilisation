@@ -9,8 +9,20 @@ public class DetailsBonDeCommande {
     double quantite;
     double prixUnitaireHT;
     double pourcentageTVA;
-    double prixTVA;
-    double prixUnitaireTTC;
-    double totalPrixHT;
-    double totalPrixTTC;
+
+    public double getPrixTVA() {
+        return getPrixUnitaireHT() * (getPourcentageTVA() / 100.0);
+    }
+
+    public double getPrixUnitaireTTC() {
+        return getPrixUnitaireHT() + getPrixTVA();
+    }
+
+    public double getTotalPrixHT() {
+        return getPrixUnitaireHT() * getQuantite();
+    }
+
+    public double getTotalPrixTTC() {
+        return getPrixUnitaireTTC() * getQuantite();
+    }
 }
