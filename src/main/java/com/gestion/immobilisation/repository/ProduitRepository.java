@@ -8,5 +8,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public interface ProduitRepository  extends CrudRepository<Produit,Integer> {
+
 }
 

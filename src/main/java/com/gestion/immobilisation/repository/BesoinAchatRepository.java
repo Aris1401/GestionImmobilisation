@@ -11,4 +11,7 @@ import java.util.ArrayList;
 public interface BesoinAchatRepository extends CrudRepository<BesoinAchat,Integer>
 {
     public ArrayList<BesoinAchat> findByEtatBesoin(BesoinAchat.EtatBesoin etatBesoin);
+
+    @Query("select * from BesoinAchat where =?")
+    public ArrayList<BesoinAchat> obtenirBesoinsAchatsEnCours();
 }
