@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import javax.swing.*;
 
-public interface DemandeProduitRepository  extends CrudRepository<DemandeProduit,Long>
+public interface DemandeProduitRepository  extends CrudRepository<DemandeProduit,Integer>
 {
 }
 

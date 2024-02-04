@@ -5,7 +5,7 @@ import com.gestion.immobilisation.model.*;
 
 import javax.swing.*;
 
-public interface FournisseurRepository  extends CrudRepository<Fournisseur,Long>
+public interface FournisseurRepository  extends CrudRepository<Fournisseur,Integer>
 {
 }
 

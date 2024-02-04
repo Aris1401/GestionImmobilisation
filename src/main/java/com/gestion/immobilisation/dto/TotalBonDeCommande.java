@@ -1,4 +1,4 @@
-package com.gestion.immobilisation.model;
+package com.gestion.immobilisation.dto;
 
 @Data
 public class TotalBonDeCommande {
