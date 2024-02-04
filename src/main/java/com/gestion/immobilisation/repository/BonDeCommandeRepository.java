@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import javax.swing.*;
 
-public interface BonDeCommandeRepository  extends CrudRepository<BonDeCommande,Long>
+public interface BonDeCommandeRepository  extends CrudRepository<BonDeCommande,Integer>
 {
 }
 
