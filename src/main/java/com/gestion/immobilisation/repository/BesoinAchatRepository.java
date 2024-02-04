@@ -8,18 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public interface BesoinAchatRepository extends CrudRepository<BesoinAchat,Long>
+public interface BesoinAchatRepository extends CrudRepository<BesoinAchat,Integer>
 {
-    @Query("select * from BesoinAchat where =?")
-    public ArrayList<BesoinAchat> obtenirBesoinsAchatsEnCours();
-
-    @Query("select * from BesoinAchat where =?")
-    public ArrayList<BesoinAchat> obtenirBesoinsAchatsValidee();
-
-    @Query("select * from Departement")
-    public ArrayList<BesoinAchat> getAllBesoinAchat();
-
-    @Query("select count(idMatch) from ActionMatch where idJoueur=?1 GROUP BY idMatch")
-    public double  getMatchJouerParJoueur(int idJoueur);
-}
+    public ArrayList<BesoinAchat> findByEtatBesoin(BesoinAchat.EtatBesoin etatBesoin);
 }

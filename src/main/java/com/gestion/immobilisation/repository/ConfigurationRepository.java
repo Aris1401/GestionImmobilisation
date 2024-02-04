@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import javax.swing.*;
 
-public interface ConfigurationRepository  extends CrudRepository<Configuration,Long>
+public interface ConfigurationRepository  extends CrudRepository<Configuration,Integer>
 {
 }
 
