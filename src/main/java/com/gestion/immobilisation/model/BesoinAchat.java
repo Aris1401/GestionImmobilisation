@@ -3,11 +3,15 @@ package com.gestion.immobilisation.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.Subselect;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Date;
 import java.util.List;
 
 @Data
+@Entity
+@Subselect("select * from v_besoin_achat_en_nature")
 public class BesoinAchat {
     public enum EtatBesoin {
         EN_COURS,

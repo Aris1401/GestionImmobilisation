@@ -1,12 +1,12 @@
 package com.gestion.immobilisation.repository;
 
-import com.gestion.immobilisation.model.*;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import com.gestion.immobilisation.model.BesoinAchat;
+import com.gestion.immobilisation.model.Produit;
+import org.hibernate.mapping.List;
+import org.springframework.stereotype.Repository;
 
-import javax.swing.*;
-import java.util.ArrayList;
 
-public interface ProduitRepository  extends CrudRepository<Produit,Integer> {
+@Repository
+public interface ProduitRepository extends CrudRepository<Produit, Integer> {
+
 }
-
